@@ -1,0 +1,26 @@
+<resources>
+
+    <!--
+     https://console.cloud.google.com/
+     click this link
+     If asked sign in with your google account
+     at the top select the existing project or click the dropdown and choose "New Project"
+     Once in the project, on the left hand side menu, click:
+     "APIs & Services" > "Credentials"
+     now click on create credentials button at the top
+     Choose API key
+     It will generate the api key.
+
+     after adding the api key in this file.
+
+     Also enable the map SDK-
+     In the left menu, go to -> APIs & Services > Library
+     Search: "Map SDK for Android"
+     Click it -> Then enable.
+     This will ensure your API key has access to the map functionality.
+
+    -->
+
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAWU8agFDieNnI8FpXdGqasIK1j1x_TImE</string>
+</resources>
