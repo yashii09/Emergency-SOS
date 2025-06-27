@@ -20,7 +20,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            debuggable true
+        }
         release {
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -49,5 +53,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation libs.androidx.room.runtime
     kapt libs.androidx.room.compiler
+
+    implementation "androidx.room:room-ktx:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    androidTestImplementation "androidx.room:room-testing:2.3.0"
 
 }
