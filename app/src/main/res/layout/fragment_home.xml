@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
-        android:id="@+id/more_icon"
+        android:id="@+id/three_dots_signout"
         android:src="@drawable/ic_more"
         android:layout_width="@dimen/dimen_32"
         android:layout_height="@dimen/dimen_32"

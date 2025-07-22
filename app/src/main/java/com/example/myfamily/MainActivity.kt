@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.myfamily.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -23,16 +24,20 @@ class MainActivity : AppCompatActivity() {
 
     val permissionsCode = 78
 
+    lateinit var binding: ActivityMainBinding
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
        askForPermission()
 
-        val bottomBar = findViewById<BottomNavigationView>(R.id.bottom_bar)
 
-       bottomBar.setOnItemSelectedListener {menuItem ->
+
+       binding.bottomBar.setOnItemSelectedListener {menuItem ->
 
            when (menuItem.itemId) {
                R.id.nav_guard -> {
@@ -51,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
            true
        }
-        bottomBar.selectedItemId = R.id.nav_home
+        binding.bottomBar.selectedItemId = R.id.nav_home
     }
 
     private fun askForPermission() {
